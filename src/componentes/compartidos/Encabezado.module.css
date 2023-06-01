@@ -1,0 +1,15 @@
+.encabezado{
+    @apply h-xl flex justify-between shadow bg-gradient-to-r from-blue-100 to-violet-500 relative;
+}
+
+.contenedor{
+    @apply flex items-center pl-4;
+}
+
+.logo{
+    @apply mr-2 h-9 w-9;
+}
+
+.appname{
+    @apply text-lg font-semibold text-gray-900 uppercase;
+}

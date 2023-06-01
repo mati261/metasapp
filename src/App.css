@@ -1,0 +1,31 @@
+.tarjeta{
+  @apply rounded-xl m-4 text-gray-700 text-xs mx-4 bg-gradient-to-r from-blue-100 to-violet-500 overflow-hidden;
+}
+
+.boton{
+  @apply text-sm font-bold py-1 px-4 rounded-full;
+}
+
+.boton--negro{
+  @apply text-white nm-flat-gray-800 hover:bg-gray-600;
+}
+
+.boton--violeta{
+  @apply text-gray-700 nm-flat-gray-100 hover:bg-violet-300 ;
+}
+
+.boton--rojo{
+  @apply text-gray-700 nm-flat-gray-100 hover:bg-red-300 ;
+}
+
+.boton--gris{
+  @apply  bg-gray-100 hover:bg-gray-300;
+}
+
+.label{
+  @apply block uppercase text-xs font-bold mb-6;
+}
+
+.input{
+  @apply nm-inset-gray-200 w-full border rounded-xl h-lg px-2;
+}
