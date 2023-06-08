@@ -1,5 +1,5 @@
 .encabezado{
-    @apply h-xl flex justify-between shadow bg-gradient-to-r from-blue-100 to-violet-500 relative;
+    @apply h-xl flex justify-between shadow bg-gradient-to-r from-blue-100 to-purple-500 relative;
 }
 
 .contenedor{
