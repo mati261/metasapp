@@ -27,7 +27,7 @@ const listaMock = [
         "periodo":"año",
         "eventos":2,
         "icono":"✈️",
-        "meta":60,
+        "meta":10,
         "plazo":"2030-01-01",
         "completado":3
     }
@@ -77,6 +77,38 @@ function reductor (estado, accion){
                 objetos: estado.objetos
             };
             return nuevoEstado;
+        };
+        case 'completar':{
+            const id = accion.id;
+            if (! estado.objetos[id]){
+                return estado
+            }
+            const completar = {
+                ...estado.objetos[id],
+                completado: +estado.objetos[id].completado + 1
+            }
+
+            let nuevoEstado;
+
+            if(completar.completado === Number(completar.meta)){
+                const nuevoOrden = estado.orden.filter(item => item !==id);
+                const nuevosObjetos = {...estado.objetos,};
+                delete nuevosObjetos[id];
+                nuevoEstado = {
+                    orden: nuevoOrden,
+                    objetos: nuevosObjetos
+                };
+            } else {
+                nuevoEstado = {
+                    ...estado,
+                    objetos: {
+                        ...estado.objetos,
+                        [id]: completar
+                    }   
+                };
+            }
+            return nuevoEstado;
+            
         };  
     };
 }
